@@ -1,0 +1,50 @@
+﻿@model MvcWorkers.Models.Worker
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div class="row">
+    <div class="col-md-9 col-md-offset-3">
+        <h4>Details of Worker</h4>
+        <hr />
+        <div class="row">
+            <dl class="dl-horizontal col-md-6 col-md-pull-1">
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Boss)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Boss)
+                </dd>
+            </dl>
+        </div>
+        <div class="form-group row">
+            <div class="col-md-3">
+                @Html.ActionLink("Back to List", "Index", "", new { @class = "btn btn-default" })
+            </div>
+            <div class="col-md-3">
+                @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-default" })
+            </div>
+        </div>
+    </div>
+</div>
+
